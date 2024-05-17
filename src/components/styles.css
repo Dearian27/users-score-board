@@ -1,0 +1,58 @@
+.modal-container {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  background-color: #242424;
+}
+.modal {
+  padding: 20px;
+  background-color: #414141;
+  border-radius: 1rem;
+}
+.user-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.ctrl-btn {
+  padding: 0.3rem 0.6rem;
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+  height: 300px;
+}
+.user-item {
+  width: 100px;
+}
+.score {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  color: black;
+  transition: 1s;
+  height: 300px;
+  /* width: ; */
+  background-color: rgb(73, 73, 73);
+  z-index: -2;
+  border-radius: 0.4rem;
+}
+.progress {
+  transition: 1s;
+  border-radius: 0.4rem;
+  background-color: rgb(255, 227, 16);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: -1;
+}
