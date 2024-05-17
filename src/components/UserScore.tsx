@@ -1,5 +1,7 @@
 import "./styles.css";
 
+const colors = ["#62ff32", "#62ff32", "#ffe032", "#327dff", "#cc32ff"];
+
 const UserScore = ({
   value,
   name,
@@ -13,12 +15,21 @@ const UserScore = ({
   id: number;
   changeValue: (id: number, value: number | null) => void;
 }) => {
-  const progress = (100 * value) / maxValue;
+  let progress = 0;
+  if (maxValue !== 0) {
+    progress = (100 * value) / maxValue;
+  }
   return (
     <div className="user-item">
       <div className="score">
         {value}
-        <div className="progress" style={{ height: `${progress}%` }} />
+        <div
+          className="progress"
+          style={{
+            height: `${progress === 0 ? 1 : progress}%`,
+            backgroundColor: colors[id % colors.length],
+          }}
+        />
       </div>
       <div className="name">{name}</div>
       <div className="actions">
